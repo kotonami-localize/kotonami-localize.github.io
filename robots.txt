@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kotonami-localize.github.io/sitemap.xml
