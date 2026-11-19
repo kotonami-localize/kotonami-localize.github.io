@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Machine-Translated Japanese: Before &amp; After Sample Edits | Kotonami</title>
+<meta name="description" content="Full before-and-after sample edits of machine-translated Japanese: a Steam store description, game UI strings and an App Store listing, with notes on every fix. Plus 6 signs your Japanese was machine-translated.">
+<link rel="canonical" href="https://kotonami-localize.github.io/samples.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b8412c'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'%3EK%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kotonami Japanese Localization">
+<meta property="og:title" content="Machine-translated Japanese: before &amp; after sample edits">
+<meta property="og:description" content="A Steam page, game UI strings and an App Store listing, fixed line by line with notes on why.">
+<meta property="og:url" content="https://kotonami-localize.github.io/samples.html">
+<meta property="og:image" content="https://kotonami-localize.github.io/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbfaf7; --surface:#ffffff; --text:#1d1d1f; --muted:#5f6368; --line:#e6e2da;
+  --accent:#b8412c; --on-accent:#ffffff; --accent-soft:#f6e7e3; --good:#2f6f4f; --good-soft:#e5f1ea;
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#141414;--surface:#1d1d1d;--text:#ecebe8;--muted:#a7a7a2;--line:#33322f;
+        --accent:#e07a63;--on-accent:#1a0d0a;--accent-soft:#3a2420;--good:#7cc49c;--good-soft:#1f3328;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,"Noto Sans JP",system-ui,sans-serif}
+.jp{font-family:"Noto Sans JP",sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.brand{font-weight:700;font-size:18px;color:var(--text);text-decoration:none}
+.brand span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:15px}
+nav a:hover{color:var(--text)}
+.hero{padding:56px 0 32px}
+.hero h1{font-size:clamp(28px,4.5vw,40px);line-height:1.2;margin:0 0 14px;letter-spacing:-.02em}
+.hero p{font-size:18px;color:var(--muted);max-width:700px;margin:0 0 12px}
+.btn{display:inline-block;background:var(--accent);color:var(--on-accent);padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:600}
+section{padding:44px 0;border-top:1px solid var(--line)}
+h2{font-size:24px;margin:0 0 6px;letter-spacing:-.01em}
+h3{font-size:17px;margin:22px 0 8px}
+.lead{color:var(--muted);margin:0 0 22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:12px}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:4px;margin-bottom:8px;background:var(--line);color:var(--muted)}
+.before .tag{background:var(--accent-soft);color:var(--accent)}
+.after .tag{background:var(--good-soft);color:var(--good)}
+.after{border-color:var(--good)}
+.card p{margin:0 0 6px}
+.card p:last-child{margin-bottom:0}
+.card .jp{font-size:17px;line-height:1.85}
+.back{font-size:14px;color:var(--muted);font-style:italic}
+mark{background:var(--accent-soft);color:inherit;border-radius:3px;padding:0 2px}
+ol.notes{padding-left:22px;margin:0}
+ol.notes li{margin-bottom:10px}
+ol.notes .jp{font-weight:700}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:15px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+td.mt{color:var(--accent)}
+td.ok{color:var(--good);font-weight:700}
+td.why{color:var(--muted);font-size:14px;min-width:220px}
+tr:last-child td{border-bottom:none}
+.signs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.signs .card{margin:0}
+.signs h3{margin:0 0 6px;font-size:16px}
+.signs p{color:var(--muted);font-size:15px}
+.contact{text-align:center}
+.contact p{color:var(--muted)}
+.small{font-size:14px;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:28px 0;font-size:14px;color:var(--muted)}
+@media (max-width:720px){
+  nav a{margin-left:14px;font-size:14px}
+  nav a.wide{display:none}
+  .signs{grid-template-columns:1fr}
+  th,td{padding:8px 10px}
+}
+@media print{
+  header nav,.contact .btn{display:none}
+  section{break-inside:auto;padding:24px 0}
+  .card,tr{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="./">Koto<span>nami</span></a>
+    <nav aria-label="Main"><a href="./">Home</a><a class="wide" href="./#pricing">Pricing</a><a class="wide" href="#signs">6 signs</a><a href="#contact">Free sample</a></nav>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap">
+    <h1>Machine-translated Japanese: full before &amp; after edits</h1>
+    <p>Three complete sample edits, laid out exactly the way we deliver them: the English source, the machine-translated Japanese, our rewrite, and a short note on every important fix.</p>
+    <p class="small">All products, names and texts on this page are fictional and were written for illustration. The "machine translation" lines reproduce typical machine-translation mistakes; they are not the output of any particular tool.</p>
+  </div>
+</div>
+
+<section id="steam">
+  <div class="wrap">
+    <h2>1. Steam store page: "About This Game"</h2>
+    <p class="lead">A fictional deckbuilding roguelike. This is the paragraph Japanese players read before deciding to wishlist.</p>
+
+    <div class="card"><span class="tag">English source</span>
+      <p>Embark on an unforgettable journey through a world shrouded in darkness! As the last Lantern Keeper, you must explore procedurally generated islands, collect powerful relics, and defeat terrifying monsters. Every run is different. Build your deck, upgrade your lantern, and discover the secrets of the Endless Night. Can you bring the light back?</p>
+    </div>
+
+    <div class="card before"><span class="tag">Machine translation</span>
+      <p class="jp" lang="ja">暗闇に包まれた世界<mark>を通して</mark>忘れられない旅に乗り出しましょう！最後の<mark>ランタンキーパー</mark>として、<mark>あなたは</mark><mark>手続き的に生成された</mark>島々を探索し、強力な遺物を収集し、恐ろしいモンスターを倒さなければなりません。<mark>すべての実行は異なります。</mark><mark>あなたの</mark>デッキを構築し、<mark>あなたの</mark>ランタンをアップグレードし、<mark>エンドレスナイト</mark>の秘密を発見してください。<mark>あなたは光を取り戻すことができますか？</mark></p>
+    </div>
+
+    <div class="card after"><span class="tag">Kotonami</span>
+      <p class="jp" lang="ja">闇に閉ざされた世界で、忘れられない旅が始まる。<br>最後の「灯守(ひもり)」として、訪れるたびに姿を変える島々を探索し、強力な遺物を集め、恐ろしい魔物を打ち倒せ。<br>プレイするたびに展開が変わるローグライク。デッキを組み、ランタンを強化し、「終わらない夜」の秘密を解き明かせ。<br>この世界に、もう一度光を灯せるか――。</p>
+      <p class="back">What it says now: "In a world sealed in darkness, an unforgettable journey begins. As the last Lantern Keeper, explore islands that change every time you visit, gather powerful relics and strike down terrifying monsters. A roguelike where every playthrough unfolds differently. Build your deck, power up your lantern and uncover the secrets of the Endless Night. Can you light this world once more?"</p>
+    </div>
+
+    <h3>Notes on the key fixes</h3>
+    <ol class="notes">
+      <li><span class="jp" lang="ja">すべての実行は異なります</span>: "run" was translated as <em>running a program</em>. To a Japanese player this line means "every execution is different," which makes no sense. We rewrote it as "every playthrough unfolds differently."</li>
+      <li><span class="jp" lang="ja">手続き的に生成された</span>: a word-for-word rendering of "procedurally generated." Japanese players don't use this phrase. We describe what it means for the player instead: islands that change every visit.</li>
+      <li><span class="jp" lang="ja">あなた / あなたの</span> appears four times. Japanese normally drops "you," and repeating it makes the text sound like a textbook or a legal notice.</li>
+      <li><span class="jp" lang="ja">ランタンキーパー / エンドレスナイト</span>: English names written in katakana carry little meaning or mood for many Japanese readers. We suggest Japanese names. You decide, and we record your choices in a glossary so the store page and the game always match.</li>
+      <li>The closing question <span class="jp" lang="ja">あなたは光を取り戻すことができますか？</span> reads like a quiz. Japanese store copy often closes on a short, dramatic line ending in a dash.</li>
+      <li><span class="jp" lang="ja">を通して</span> ("through") is used in the sense of "by means of," which is grammatically wrong here.</li>
+      <li>We added the genre word <span class="jp" lang="ja">ローグライク</span> because Japanese players search for it on Steam. We never add or remove content without telling you. Changes like this are always flagged in the notes, and you can say no.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="ui">
+  <div class="wrap">
+    <h2>2. Game UI strings</h2>
+    <p class="lead">String files give the translator no context, so a machine can't tell whether "Back" means a button or a body part. Here are eight short strings from a fictional action RPG.</p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>English</th><th>Machine translation</th><th>Kotonami</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Back</td><td class="mt jp" lang="ja">背中</td><td class="ok jp" lang="ja">戻る</td><td class="why">The machine chose "back" as in the body part. It's a menu button.</td></tr>
+        <tr><td>New Game</td><td class="mt jp" lang="ja">新しいゲーム</td><td class="ok jp" lang="ja">はじめから</td><td class="why">Most Japanese games label it "from the beginning."</td></tr>
+        <tr><td>Continue</td><td class="mt jp" lang="ja">続行</td><td class="ok jp" lang="ja">つづきから</td><td class="why"><span class="jp" lang="ja">続行</span> sounds like resuming a paused process. The standard menu label pairs with <span class="jp" lang="ja">はじめから</span>.</td></tr>
+        <tr><td>Quit to Desktop</td><td class="mt jp" lang="ja">デスクトップに終了</td><td class="ok jp" lang="ja">ゲームを終了</td><td class="why">"Quit to the desktop" doesn't work as Japanese grammar. Players expect "quit the game."</td></tr>
+        <tr><td>Health Potion</td><td class="mt jp" lang="ja">健康ポーション</td><td class="ok jp" lang="ja">回復薬</td><td class="why">"Health" became wellness, as in a health drink. In games, "health" is HP, and this item is a healing potion.</td></tr>
+        <tr><td>Inventory full!</td><td class="mt jp" lang="ja">在庫がいっぱいです！</td><td class="ok jp" lang="ja">持ち物がいっぱいです</td><td class="why"><span class="jp" lang="ja">在庫</span> means a shop's stock. A player's inventory is their belongings.</td></tr>
+        <tr><td>You died</td><td class="mt jp" lang="ja">あなたは死にました</td><td class="ok jp" lang="ja">力尽きた…</td><td class="why">The literal version sounds like a cold medical report. Japanese games use softer, more dramatic phrasing.</td></tr>
+        <tr><td>Save Slot 1</td><td class="mt jp" lang="ja">保存スロット1</td><td class="ok jp" lang="ja">セーブデータ1</td><td class="why">Elsewhere the same file used <span class="jp" lang="ja">セーブ</span>. One concept should use one word everywhere, so we unify the terms and list them in your glossary.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="small">Tip: if you send a string file, a few screenshots showing where the strings appear help us pick the right word. We also check that each line fits its button or text box.</p>
+  </div>
+</section>
+
+<section id="app">
+  <div class="wrap">
+    <h2>3. App Store listing: subtitle and description</h2>
+    <p class="lead">A fictional habit-tracking app. On the App Store, the subtitle is limited to 30 characters and appears under the app name across the store, so every character counts.</p>
+
+    <div class="card"><span class="tag">English source</span>
+      <p><strong>Subtitle:</strong> Build better habits, one day at a time</p>
+      <p><strong>Description:</strong> Build healthy routines that actually stick. Track your habits, get gentle reminders, and watch your garden grow as you stay consistent. No ads. No pressure.</p>
+    </div>
+
+    <div class="card before"><span class="tag">Machine translation</span>
+      <p class="jp" lang="ja"><strong>サブタイトル:</strong><mark>一度に一日</mark>、より良い習慣を<mark>構築する</mark></p>
+      <p class="jp" lang="ja"><strong>説明:</strong>実際に定着する健康的なルーティンを<mark>構築します</mark>。習慣を<mark>追跡し</mark>、穏やかなリマインダーを受け取り、<mark>一貫性を保つにつれて</mark>あなたの庭が成長するのを見てください。<mark>広告はありません。プレッシャーはありません。</mark></p>
+    </div>
+
+    <div class="card after"><span class="tag">Kotonami</span>
+      <p class="jp" lang="ja"><strong>サブタイトル:</strong>毎日つづく、かんたん習慣づくり</p>
+      <p class="jp" lang="ja"><strong>説明:</strong>健康的な習慣が、無理なく身につく。<br>毎日の記録とやさしいリマインダーで、続けるほど画面の中の庭がすくすく育ちます。<br>広告なし、ノルマなし。</p>
+      <p class="back">What it says now: Subtitle: "Easy habit-building that lasts, day after day." Description: "Healthy habits that take hold without strain. With daily tracking and gentle reminders, the garden on your screen grows the longer you keep going. No ads, no quotas."</p>
+    </div>
+
+    <h3>Notes on the key fixes</h3>
+    <ol class="notes">
+      <li><span class="jp" lang="ja">一度に一日</span>: "one day at a time" translated word by word. It isn't a Japanese expression, and it uses up the 30-character subtitle without saying anything. The new subtitle is 15 characters and includes <span class="jp" lang="ja">習慣</span> (habit), the word Japanese users actually search for.</li>
+      <li><span class="jp" lang="ja">構築する</span>: "build" as in building a system or a database. Habits aren't "constructed" in Japanese. They are formed (<span class="jp" lang="ja">身につく</span>, <span class="jp" lang="ja">習慣づくり</span>).</li>
+      <li><span class="jp" lang="ja">追跡する</span>: "track" as in tracking a parcel or following a suspect. For habits, Japanese apps say <span class="jp" lang="ja">記録</span> (record).</li>
+      <li><span class="jp" lang="ja">一貫性を保つにつれて</span>: "as you stay consistent" turned into abstract, academic wording. <span class="jp" lang="ja">続けるほど</span> ("the longer you keep going") is how people really talk about it.</li>
+      <li><span class="jp" lang="ja">広告はありません。プレッシャーはありません。</span> sounds like a list of denials. <span class="jp" lang="ja">広告なし、ノルマなし</span> is the short, confident style Japanese app pages use. <span class="jp" lang="ja">ノルマ</span> (a quota) is the everyday word for the kind of pressure you mean.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="signs">
+  <div class="wrap">
+    <h2>6 signs your Japanese was machine-translated</h2>
+    <p class="lead">You don't need to read Japanese to check for most of these. Open your Japanese page and use your browser's find (Ctrl+F) to look for the patterns.</p>
+    <div class="signs">
+      <div class="card"><h3>1. "あなた" everywhere</h3><p>あなた means "you." Natural Japanese uses it rarely. If it appears in almost every sentence, the text was translated word for word.</p></div>
+      <div class="card"><h3>2. Katakana copies of English names</h3><p>Long katakana strings such as エンドレスナイト are English sounds with little meaning for many Japanese readers. Key names usually deserve a Japanese version.</p></div>
+      <div class="card"><h3>3. The wrong meaning of a word</h3><p>背中 (a body part) for "Back," 在庫 (shop stock) for "Inventory," 実行 (running a program) for a game "run." These come from missing context.</p></div>
+      <div class="card"><h3>4. Stiff "〜することができます"</h3><p>"You can do X," translated literally, makes every sentence long and formal. Natural copy is shorter and says it directly.</p></div>
+      <div class="card"><h3>5. One concept, several words</h3><p>保存 on one screen and セーブ on another, or two names for the same item. Japanese players read this as a sign of low care.</p></div>
+      <div class="card"><h3>6. English punctuation and spacing</h3><p>English commas and periods (, .) in place of 、 and 。, or spaces between Japanese words, look foreign at a glance.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Want to see your own text like this?</h2>
+    <p>Send us a link to your Japanese store page or paste a few lines. We'll edit a short sample for free, with notes, so you can judge before ordering. Paid edits start at $5 for up to 300 Japanese characters.</p>
+    <p><a class="btn" href="mailto:kotonami.localize@gmail.com?subject=Free%20sample%20edit&amp;body=Hi%20Kotonami%2C%0A%0AProduct%20name%3A%20%0ALink%20to%20Japanese%20page%20(or%20paste%20a%20few%20lines)%3A%20%0AWhat%20I%20need%20(store%20page%20%2F%20game%20text%20%2F%20app%20%2F%20other)%3A%20%0A%0AThanks!">Email kotonami.localize@gmail.com</a></p>
+    <p class="small">We reply within one business day. <a href="./#pricing">See all prices</a>.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    Kotonami Japanese Localization · Natural Japanese for global brands · <a href="mailto:kotonami.localize@gmail.com">kotonami.localize@gmail.com</a> · <a href="https://kotonami-localize.github.io/">kotonami-localize.github.io</a><br>
+    Kotonami, 2F-C Shibuya Dogenzaka Tokyu Bldg., 1-10-8 Dogenzaka, Shibuya-ku, Tokyo 150-0043, Japan
+  </div>
+</footer>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5295c3b61314475e89c19e06404aeeb5"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
