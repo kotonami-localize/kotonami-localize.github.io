@@ -31,9 +31,25 @@
   "address": {"@type": "PostalAddress", "streetAddress": "2F-C Shibuya Dogenzaka Tokyu Bldg., 1-10-8 Dogenzaka", "addressLocality": "Shibuya-ku", "addressRegion": "Tokyo", "postalCode": "150-0043", "addressCountry": "JP"}
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Do I need to send the English source text too?", "acceptedAnswer": {"@type": "Answer", "text": "It helps. With the English, we can check that the meaning is right, not just the style. If you only have the Japanese, we can still make it sound natural."}},
+    {"@type": "Question", "name": "Can you try a small part first?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Send a few lines and we'll edit them for free, so you can judge the quality before ordering."}},
+    {"@type": "Question", "name": "How are characters counted?", "acceptedAnswer": {"@type": "Answer", "text": "We count the characters in the Japanese text you send, including punctuation. For new store or product descriptions, the price is per listing."}},
+    {"@type": "Question", "name": "Will you keep my text confidential?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Your text is used only for your project and is never published or shared."}},
+    {"@type": "Question", "name": "Do you translate from scratch?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We translate games, apps and software from English into Japanese at $0.06 per English word (minimum $60). Send us your word count and file format, and we'll reply with a fixed quote and delivery date."}},
+    {"@type": "Question", "name": "How long does a full translation take?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the word count and how much context the text needs. We agree on a delivery date in your quote before any work starts, and we keep to it."}},
+    {"@type": "Question", "name": "What are the length limits for Japanese Steam, App Store and Google Play pages?", "acceptedAnswer": {"@type": "Answer", "text": "Google Play: app name 30 characters, short description 80, full description 4,000, and the limits apply to full-width (Japanese) characters too. App Store: app name 30 characters, subtitle 30, promotional text 170, description 4,000; keywords are limited to 100 bytes, and Japanese characters take more than one byte each. Steam: Valve doesn't publish an exact number for the short description, only that it is limited to a few hundred characters, and formatting such as line breaks doesn't display there. Sources: Play Console Help, App Store Connect Help and Steamworks documentation, checked November 2026."}},
+    {"@type": "Question", "name": "Why does natural Japanese avoid \"you\" (あなた)?", "acceptedAnswer": {"@type": "Answer", "text": "Japanese normally leaves out the subject when it's clear from context, so a literal \"you\" in every sentence sounds stiff and foreign. あなた can feel distant, and sometimes cold or confrontational. Japanese games and apps usually drop the subject entirely or name the thing instead, such as the player or the character. Repeated あなた is one of the quickest signs that text was machine translated."}}
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;700&display=optional" rel="stylesheet">
 <style>
 :root{
   --bg:#fbfaf7; --surface:#ffffff; --text:#1d1d1f; --muted:#5f6368; --line:#e6e2da;
@@ -221,6 +237,8 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:14px;color:var(
     <details><summary>Will you keep my text confidential?</summary><p>Yes. Your text is used only for your project and is never published or shared.</p></details>
     <details><summary>Do you translate from scratch?</summary><p>Yes. We translate games, apps and software from English into Japanese at $0.06 per English word (minimum $60). Send us your word count and file format, and we'll reply with a fixed quote and delivery date.</p></details>
     <details><summary>How long does a full translation take?</summary><p>It depends on the word count and how much context the text needs. We agree on a delivery date in your quote before any work starts, and we keep to it.</p></details>
+    <details id="store-limits"><summary>What are the length limits for Japanese Steam, App Store and Google Play pages?</summary><p><strong>Google Play:</strong> app name 30 characters, short description 80, full description 4,000. Google states these limits apply to full-width characters too, so each Japanese character counts as one.<br><strong>App Store:</strong> app name 30 characters, subtitle 30, promotional text 170, description 4,000. Keywords are limited to 100 <em>bytes</em>, not characters, and Japanese characters take more than one byte each, so the keyword field fills up much faster in Japanese than in English.<br><strong>Steam:</strong> Valve doesn't publish an exact number for the short description, only that it is limited to a few hundred characters, and line breaks or other formatting don't display properly there.</p><p>Japanese usually needs fewer characters than English to say the same thing, so a good translation fits these limits more easily than a word-for-word one. We check every field against its limit before delivery.</p><p class="small">Sources: <a href="https://support.google.com/googleplay/android-developer/answer/9859152?hl=en" rel="noopener">Play Console Help</a>, <a href="https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information" rel="noopener">App Store Connect Help</a>, <a href="https://partner.steamgames.com/doc/store/page/description" rel="noopener">Steamworks documentation</a> (checked November 2026; platforms may change their limits).</p></details>
+    <details id="anata"><summary>Why does natural Japanese avoid "you" (あなた)?</summary><p>Japanese normally leaves out the subject when it's clear from context, so a literal "you" in every sentence sounds stiff and foreign. あなた in particular can feel distant, and in some situations even cold or confrontational. Japanese games and apps usually drop the subject entirely ("攻撃力が上がる", "attack goes up") or name the thing instead, such as "プレイヤー" (player) or the character's name. Repeated あなた is one of the quickest signs to a Japanese reader that the text was machine translated.</p></details>
   </div>
 </section>
 
